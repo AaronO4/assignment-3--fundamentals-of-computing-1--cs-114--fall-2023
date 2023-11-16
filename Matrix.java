@@ -46,7 +46,7 @@ public static void flipMatrix(){
   for(int row = 0; row < size / 2; row++){ // prints array
       for(int col = 0; col < size; col++) {
           if(row + col != size - 1){
-            swap(row, col, size - row, size - col);
+            swap(row, col, size - row - 1, size - col - 1);
           }
       }
         System.out.println();
