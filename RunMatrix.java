@@ -13,9 +13,14 @@ public int value = 1;
   System.out.println("Your matrix is " + size + " x " + size);
   scan.close();
 
-    printMatrix();
-    populateMatrix();
-    flipMatrix();
+    int matrixPrint = new int();
+    matrixPrint.printMatrix();
+
+    int matrixPopulate = new int();
+    matrixPopulate.populateMatrix();
+
+    int matrixFlip = new int();
+    matrixFlip.flipMatrix();
 
   }
 }
