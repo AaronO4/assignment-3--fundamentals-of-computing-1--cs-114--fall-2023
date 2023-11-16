@@ -14,9 +14,13 @@ public int value = 1;
   final int size = scan.nextInt();
   System.out.println("Your matrix is " + size + " x " + size);
   scan.close();
+
+  printMatrix();
+  populateMatrix();
+  flipMatrix();
   }
 
-public void printMatrix(){
+public static void printMatrix(){
 System.out.println("Printing matrix with default values:");
   for(int row = 0; row < matrix.length; row++){
       for(int col = 0; col < matrix[row].length; col++) {
@@ -27,7 +31,7 @@ System.out.println("Printing matrix with default values:");
 }
 
 // loads values into the table
-public void populateMatrix(){
+public static void populateMatrix(){
   int value = 1;
 
   System.out.println("Populating matrix... matrix populated.");
@@ -51,7 +55,7 @@ private static void swap(int x1, int y1, int x2, int y2){
 }
 
 //flipped version has to go here
-public void flipMatrix(){
+public static void flipMatrix(){
     int[][] matrix = new int[size][size];
 
   System.out.println("Flipping matrix... matrix flipped.");
