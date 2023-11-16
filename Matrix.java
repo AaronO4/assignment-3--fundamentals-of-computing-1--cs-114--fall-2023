@@ -49,6 +49,7 @@ public static void flipMatrix(){ //flipped version of the matrix
           if(row + col != size - 1){ //checks which numbers need to be flipped
             swap(row, col, size - row - 1, size - col - 1); //-1s cause the function to not flip diagonals
           }
+        System.out.print(matrix[row][col] + "\t");
       }
         System.out.println();
     }
