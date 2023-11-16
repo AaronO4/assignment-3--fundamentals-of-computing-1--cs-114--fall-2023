@@ -1,8 +1,6 @@
 import java.util.Scanner;
 
 public class RunMatrix {
-public static int size;
-public static int[][] matrix;
 public int value = 1;
 
   public static void main(String[] args) {

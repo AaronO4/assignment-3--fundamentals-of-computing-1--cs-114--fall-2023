@@ -1,6 +1,7 @@
 public class Matrix {
 
-}
+    public static int size;
+    public static int[][] matrix;
 
 public void printMatrix(){
     System.out.println("Printing matrix with default values:");
@@ -51,4 +52,5 @@ public void flipMatrix(){
       }
         System.out.println();
     }
+}
 }
