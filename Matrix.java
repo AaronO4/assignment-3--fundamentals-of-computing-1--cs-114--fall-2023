@@ -5,8 +5,8 @@ public class Matrix {
 
 public static void printMatrix(){
     System.out.println("Printing matrix with default values:");
-        for(int row = 0; row < matrix.length; row++){
-            for(int col = 0; col < matrix[row].length; col++) {
+        for(int row = 0; row < size; row++){
+            for(int col = 0; col < size; col++) {
                 System.out.print(matrix[row][col] + "\t");
             }
         System.out.println();
@@ -20,8 +20,8 @@ public static void populateMatrix(){
     System.out.println("Populating matrix... matrix populated.");
     System.out.println("Printing matrix:");
   
-    for(int row = 0; row < matrix.length; row++){ // prints array
-        for(int col = 0; col < matrix[row].length; col++) {
+    for(int row = 0; row < size; row++){ // prints array
+        for(int col = 0; col < size; col++) {
           matrix[row][col] = value++;
           System.out.print(matrix[row][col] + "\t");
         }
@@ -44,8 +44,8 @@ public static void flipMatrix(){
   System.out.println("Flipping matrix... matrix flipped.");
   System.out.println("Printing flipped matrix:");
 
-  for(int row = 0; row < matrix.length / 2; row++){ // prints array
-      for(int col = 0; col < matrix[row].length; col++) {
+  for(int row = 0; row < size / 2; row++){ // prints array
+      for(int col = 0; col < size; col++) {
           if(row + col != size - 1){
             swap(row, col, size - row, size - col);
           }
