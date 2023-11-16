@@ -11,9 +11,9 @@ public static int size;
   System.out.println("Your matrix is " + size + " x " + size);
   scan.close();
 
-      Matrix.flipMatrix();
       Matrix.printMatrix();
       Matrix.populateMatrix();
+      Matrix.flipMatrix();
   }
 }
 
