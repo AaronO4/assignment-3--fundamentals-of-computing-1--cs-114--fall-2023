@@ -39,8 +39,7 @@ public static void populateMatrix(){
 
 //flipped version has to go here
 public static void flipMatrix(){
-    int[][] matrix = new int[size][size];
-
+    
   System.out.println("Flipping matrix... matrix flipped.");
   System.out.println("Printing flipped matrix:");
 
