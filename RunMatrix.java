@@ -2,12 +2,12 @@ import java.util.Scanner;
 
 public class RunMatrix {
 
-  private static void swap(int row1, int col1, int row2, int col2){
-    int[][] table = new int[row1][col1];
+  private static void swap(int x1, int y1, int x2, int y2){
+    int[][] table = new int[x1][y1];
 
-    int hold = table[row1][col1];
-    table[row1][col1] = table[row2][col2];
-    table[row2][col2] = hold;
+    int hold = table[x1][y1];
+    table[x1][y1] = table[x2][y2];
+    table[x2][y2] = hold;
   }
 
   public static void main(String[] args) {
@@ -21,43 +21,46 @@ public class RunMatrix {
   System.out.println("Your matrix is " + size + " x " + size);
   scan.close();
 
-int[][] table = new int[size][size];
+int[][] matrix = new int[size][size];
+  }
 
+public void printMatrix(){
 System.out.println("Printing matrix with default values:");
-  for(int row = 0; row < table.length; row++){
-      for(int col = 0; col < table[row].length; col++) {
-          System.out.print(table[row][col] + "\t");
+  for(int row = 0; row < matrix.length; row++){
+      for(int col = 0; col < matrix[row].length; col++) {
+          System.out.print(matrix[row][col] + "\t");
       }
   System.out.println();
   }
-
-System.out.println("Populating matrix... matrix populated.");
-System.out.println("Printing matrix:");
+}
 
 // loads values into the table
+public void populateMatrix(){
+  System.out.println("Populating matrix... matrix populated.");
+  System.out.println("Printing matrix:");
 
-  for(int row = 0; row < table.length; row++){ // prints array
-      for(int col = 0; col < table[row].length; col++) {
-      table[row][col] = value++;
-          System.out.print(table[row][col] + "\t");
+  for(int row = 0; row < matrix.length; row++){ // prints array
+      for(int col = 0; col < matrix[row].length; col++) {
+        matrix[row][col] = value++;
+        System.out.print(matrix[row][col] + "\t");
       }
 
   System.out.println();
   }
+}
 
-System.out.println("Flipping matrix... matrix flipped.");
-System.out.println("Printing flipped matrix:");
-
-// size-1 = table[row].length+table[col].length;
 //flipped version has to go here
+public void flipMatrix(){
+  System.out.println("Flipping matrix... matrix flipped.");
+  System.out.println("Printing flipped matrix:");
 
-  for(int row = 0; row < table.length / 2; row++){ // prints array
-      for(int col = 0; col < table[row].length; col++) {
+  for(int row = 0; row < matrix.length / 2; row++){ // prints array
+      for(int col = 0; col < matrix[row].length; col++) {
           if(row + col != size - 1){
             swap(row, col, size - row, size - col);
           }
       }
         System.out.println();
     }
-}
+    }
 }
