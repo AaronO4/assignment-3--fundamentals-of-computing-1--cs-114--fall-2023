@@ -1,7 +1,7 @@
 public class Matrix {
 
     public static int size; // declares array size and matrix to allow methods to function
-    public static int[][] matrix;
+    public static int[][] matrix = new int[size][size];
 
 public static void printMatrix(){
     System.out.println("Printing matrix with default values:"); //prints unpopulated array
