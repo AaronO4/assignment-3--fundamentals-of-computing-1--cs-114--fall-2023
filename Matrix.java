@@ -3,7 +3,7 @@ public class Matrix {
     public static int size;
     public static int[][] matrix;
 
-public void printMatrix(){
+public static void printMatrix(){
     System.out.println("Printing matrix with default values:");
         for(int row = 0; row < matrix.length; row++){
             for(int col = 0; col < matrix[row].length; col++) {
@@ -14,7 +14,7 @@ public void printMatrix(){
 }
 
 // loads values into the table
-public void populateMatrix(){
+public static void populateMatrix(){
     int value = 1;
   
     System.out.println("Populating matrix... matrix populated.");
@@ -29,7 +29,7 @@ public void populateMatrix(){
     }
   }
 
-  private void swap(int x1, int y1, int x2, int y2){
+  private static void swap(int x1, int y1, int x2, int y2){
     int[][] table = new int[x1][y1];
   
     int hold = table[x1][y1];
@@ -38,7 +38,7 @@ public void populateMatrix(){
   }
 
 //flipped version has to go here
-public void flipMatrix(){
+public static void flipMatrix(){
     int[][] matrix = new int[size][size];
 
   System.out.println("Flipping matrix... matrix flipped.");
