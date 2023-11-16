@@ -13,15 +13,10 @@ public int value = 1;
   System.out.println("Your matrix is " + size + " x " + size);
   scan.close();
 
-    int matrixPrint = new int();
-    matrixPrint.printMatrix();
-
-    int matrixPopulate = new int();
-    matrixPopulate.populateMatrix();
-
-    int matrixFlip = new int();
-    matrixFlip.flipMatrix();
-
+    // Matrix matrix = new Matrix();
+      Matrix.flipMatrix();
+      Matrix.printMatrix();
+      Matrix.populateMatrix();
   }
 }
 
